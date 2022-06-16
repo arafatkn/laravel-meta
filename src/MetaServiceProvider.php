@@ -1,6 +1,6 @@
 <?php
 
-namespace Arafatkn\LaravelSettings;
+namespace Arafatkn\LaravelMeta;
 
 use Illuminate\Support\ServiceProvider;
 

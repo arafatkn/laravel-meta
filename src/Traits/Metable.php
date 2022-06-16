@@ -7,25 +7,24 @@ use Illuminate\Support\Facades\DB;
 
 trait Metable
 {
-	public function saveMeta(string $key, string $value): bool
+	public function saveMeta(string $key, string $value): Meta
 	{
 		return $this->updateMeta($key, $value);
 	}
 
-	public function updateMeta(string $key, string $value): bool
+	public function updateMeta(string $key, string $value): Meta
 	{
-		return $this->getMetaTable()->updateOrInsert(
-			[
-				'metable' => get_class($this),
-				'key' => $key,
-			],
+		return $this->metas()->updateOrCreate(
+			['key' => $key],
 			['value' => $value]
 		);
 	}
 
 	public function deleteMeta(string $key): int
 	{
-		return $this->getMetaTable()->where('key', $key)->delete();
+		return $this->metas()
+			->where('key', $key)
+			->delete();
 	}
 
 	public function metas()
@@ -35,7 +34,7 @@ trait Metable
 
 	public function scopeWithMetas($query)
 	{
-		return $query->with(['metas']);
+		return $query->with('metas');
 	}
 
 	public function getMetaTableName(): string

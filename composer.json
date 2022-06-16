@@ -2,6 +2,7 @@
     "name": "arafatkn/laravel-meta",
     "description": "Save meta with any model.",
     "type": "package",
+    "version": "0.0.1",
     "license": "MIT",
     "authors": [
         {
@@ -9,7 +10,8 @@
             "email": "arafatkn@gmail.com"
         }
     ],
-    "keywords": [ "laravel meta", "meta package" ],
+    "homepage": "https://github.com/arafatkn/laravel-meta",
+    "keywords": [ "arafatkn", "laravel meta", "meta package" ],
     "require": {
         "php": "^7.3|^8",
         "illuminate/support": "^7|^8|^9",
@@ -28,5 +30,13 @@
     "config": {
         "sort-packages": true
     },
-    "minimum-stability": "dev"
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Arafatkn\\LaravelMeta\\MetaServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

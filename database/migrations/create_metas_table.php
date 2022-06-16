@@ -6,6 +6,12 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+
 	public function up()
 	{
 		Schema::create(config('meta.table_name') ?? 'laravel_metas', function (Blueprint $table) {
@@ -14,9 +20,18 @@ return new class extends Migration
 			$table->string('metable_id');
 			$table->string('key');
 			$table->text('value');
-			$table->timestamps();
 
-			$table->unique(['metable', 'key']);
+			$table->unique(['metable_type', 'metable_id', 'key']);
 		});
+	}
+
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::dropIfExists(config('meta.table_name') ?? 'laravel_metas');
 	}
 };
