@@ -1,0 +1,32 @@
+{
+    "name": "arafatkn/laravel-meta",
+    "description": "Save meta with any model.",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arafat Islam",
+            "email": "arafatkn@gmail.com"
+        }
+    ],
+    "keywords": [ "laravel meta", "meta package" ],
+    "require": {
+        "php": "^7.3|^8",
+        "illuminate/support": "^7|^8|^9",
+        "illuminate/database": "^7|^8|^9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Arafatkn\\LaravelMeta\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Arafatkn\\LaravelMeta\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}
