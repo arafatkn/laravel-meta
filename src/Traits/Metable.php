@@ -7,6 +7,12 @@ use Illuminate\Support\Facades\DB;
 
 trait Metable
 {
+	public function getMeta(string $key, string $default = ''): string
+	{
+		$meta = $this->metas()->where('key', $key)->get();
+		return $meta ? $meta->value : $default;
+	}
+
 	public function saveMeta(string $key, string $value): Meta
 	{
 		return $this->updateMeta($key, $value);
