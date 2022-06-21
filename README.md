@@ -4,6 +4,10 @@
 [![License](https://poser.pugx.org/arafatkn/laravel-meta/license)](//packagist.org/packages/arafatkn/laravel-meta)
 [![Total Downloads](https://poser.pugx.org/arafatkn/laravel-meta/downloads)](//packagist.org/packages/arafatkn/laravel-meta)
 
+<a href="https://github.com/arafatkn/laravel-meta/issues"><img src="https://img.shields.io/github/issues/arafatkn/laravel-meta.svg" alt=""></a>
+<a href="https://github.com/arafatkn/laravel-meta/stargazers"><img src="https://img.shields.io/github/stars/arafatkn/laravel-meta.svg" alt=""></a>
+<a href="https://github.com/arafatkn/laravel-meta/network"><img src="https://img.shields.io/github/forks/arafatkn/laravel-meta.svg" alt=""></a>
+
 Save metadata (key, value) with any model.
 
 ---
