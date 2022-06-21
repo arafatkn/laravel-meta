@@ -19,7 +19,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Arafatkn\\LaravelMeta\\": "src/"
+            "Arafatkn\\LaravelMeta\\": "src/",
+            "Arafatkn\\LaravelMeta\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
@@ -38,5 +39,13 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "require-dev": {
+        "orchestra/testbench": "^7.5",
+        "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-f": "vendor/bin/phpunit --filter"
+    }
 }

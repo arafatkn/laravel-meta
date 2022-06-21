@@ -9,16 +9,16 @@ trait Metable
 {
 	public function getMeta(string $key, string $default = ''): string
 	{
-		$meta = $this->metas()->where('key', $key)->get();
+		$meta = $this->metas()->where('key', $key)->first();
 		return $meta ? $meta->value : $default;
 	}
 
-	public function saveMeta(string $key, string $value): Meta
+	public function saveMeta(string $key, string $value)
 	{
 		return $this->updateMeta($key, $value);
 	}
 
-	public function updateMeta(string $key, string $value): Meta
+	public function updateMeta(string $key, string $value)
 	{
 		return $this->metas()->updateOrCreate(
 			['key' => $key],
