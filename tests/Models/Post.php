@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-	use Metable;
+    use Metable;
 }
